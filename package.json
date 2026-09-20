@@ -1,0 +1,49 @@
+{
+  "name": "receipts-archive",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run check && vite build",
+    "preview": "vite preview",
+    "data": "node scripts/build-data.mjs",
+    "prebuild": "node scripts/verify-data.mjs",
+    "check": "tsc -b && node scripts/verify-copy.mjs",
+    "test": "vitest run",
+    "lint": "oxlint src/"
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "d3-array": "^3.2.4",
+    "d3-interpolate": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
+    "d3-time": "^3.1.0",
+    "d3-time-format": "^4.1.0",
+    "lucide-react": "^0.511.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/d3-array": "^3.2.1",
+    "@types/d3-interpolate": "^3.0.4",
+    "@types/d3-scale": "^4.0.8",
+    "@types/d3-shape": "^3.1.7",
+    "@types/d3-time": "^3.0.3",
+    "@types/d3-time-format": "^4.0.3",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "@vitest/ui": "^3.2.4",
+    "csv-parse": "^5.6.0",
+    "oxlint": "^1.81.0",
+    "playwright": "^1.53.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^3.2.4"
+  }
+}

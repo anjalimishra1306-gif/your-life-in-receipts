@@ -1,0 +1,89 @@
+/* tokens.css - design system custom properties */
+
+:root {
+  /* Ground colours */
+  --ink: #0F0F0E;
+  --ink-2: #171715;
+  --rule: #2A2924;
+  --paper: #EDE8DC;
+  --muted: #8C8778;
+  --muted-2: #5A5749;
+
+  /* Stream colours */
+  --stream-01: #6FB3A4;   /* Soundtrack - verdigris */
+  --stream-02: #D0A85C;   /* Ledger - aged brass */
+  --stream-03: #C4766B;   /* Transactions - clay (SYNTHETIC) */
+
+  /* Emphasis */
+  --emphasis: #EDE8DC;
+  --highlight: rgba(237, 232, 220, 0.08);
+  --highlight-strong: rgba(237, 232, 220, 0.14);
+
+  /* Semantic */
+  --border: var(--rule);
+  --surface: var(--ink-2);
+  --surface-2: #1E1E1B;
+  --text: var(--paper);
+  --text-muted: var(--muted);
+
+  /* Typography scale (fluid) */
+  --text-xs:   clamp(0.65rem, 0.6rem + 0.25vw, 0.75rem);
+  --text-sm:   clamp(0.75rem, 0.7rem + 0.3vw, 0.875rem);
+  --text-base: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
+  --text-md:   clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+  --text-xl:   clamp(1.375rem, 1.2rem + 0.9vw, 1.75rem);
+  --text-2xl:  clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  --text-3xl:  clamp(2.5rem, 2rem + 2vw, 3.75rem);
+  --text-4xl:  clamp(3.75rem, 3rem + 3vw, 6rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Motion */
+  --dur-fast: 120ms;
+  --dur-base: 240ms;
+  --dur-slow: 480ms;
+  --dur-cinematic: 800ms;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  /* Layout */
+  --rail-width: 4rem;
+  --rail-width-lg: 5rem;
+  --content-max: 1200px;
+  --chapter-max: 900px;
+  --reading-max: 680px;
+
+  /* Touch targets */
+  --touch-min: 44px;
+
+  /* Z layers */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+    --dur-cinematic: 0ms;
+  }
+}

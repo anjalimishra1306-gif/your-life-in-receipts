@@ -1,0 +1,32 @@
+{
+  "spotify": {
+    "rawRows": 149860,
+    "duplicateRows": 1185,
+    "postDedupRows": 148675,
+    "playsUnder30s": 55660,
+    "playsAtLeast30s": 94200,
+    "playsZeroMs": 3733,
+    "skippedFlagTrue": 7869,
+    "fwdbtnRows": 53470,
+    "dateRange": ["2013-07-08", "2024-12-15"],
+    "activeMonths": 118,
+    "totalMonths": 138
+  },
+  "ledger": {
+    "rawRows": 2461,
+    "expenseRows": 2176,
+    "incomeRows": 125,
+    "transferOutRows": 160,
+    "dateRange": ["2015-01-01", "2018-09-20"],
+    "activeMonths": 45
+  },
+  "transactions": {
+    "rawRows": 10267,
+    "uniqueTransIds": 1404,
+    "nullTransIdRows": 649,
+    "reconciledRecords": 1404,
+    "datedRecords": 1294,
+    "undatedRecords": 110,
+    "dateRange": ["2022-04-17", "2024-04-16"]
+  }
+}

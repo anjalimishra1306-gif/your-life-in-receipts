@@ -1,0 +1,76 @@
+/* motion.css - animation utilities and scroll-driven reveals */
+
+/* Base transition */
+.transition-base {
+  transition: all var(--dur-base) var(--ease);
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Counter animation: handled by JS, respects prefers-reduced-motion */
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Slide up */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Tape slide */
+@keyframes tapeSlide {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Morph (handled inline by D3 interpolation for scatter) */
+
+/* Pulse (loading state) */
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.loading { animation: pulse 1.5s ease-in-out infinite; }
+
+/* Stagger utility (set --delay on children) */
+.stagger > * {
+  animation-fill-mode: both;
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--rule) 25%, var(--surface-2) 50%, var(--rule) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 2px;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .loading, .skeleton { animation: none; opacity: 0.6; }
+  .stagger > * { animation: none; }
+}

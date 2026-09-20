@@ -1,0 +1,124 @@
+/* base.css - reset and global styles */
+@import './tokens.css';
+@import '@fontsource-variable/fraunces/index.css';
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+@import './typography.css';
+@import './layout.css';
+@import './motion.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--paper);
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+/* Skip link */
+.skip-link {
+  position: fixed;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: var(--z-toast);
+  padding: var(--space-2) var(--space-4);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  transform: translateY(calc(-100% - var(--space-4)));
+  transition: transform var(--dur-base) var(--ease);
+  border: 1px solid var(--ink);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--ink-2); }
+::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* Selection */
+::selection { background: rgba(111, 179, 164, 0.25); color: var(--paper); }
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+/* Button reset */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* Input reset */
+input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+/* Figure */
+figure { margin: 0; }
+
+/* List reset */
+ul, ol { list-style: none; }
+
+/* Anchor */
+a {
+  color: var(--stream-01);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover { color: var(--paper); }
+
+/* Tabular numerals for all figures */
+.tabular { font-variant-numeric: tabular-nums; }

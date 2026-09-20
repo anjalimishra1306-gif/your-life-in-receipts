@@ -1,0 +1,98 @@
+/* typography.css */
+
+/* Display: Fraunces variable for editorial headings */
+.font-display { font-family: 'Fraunces Variable', Georgia, serif; }
+.font-ui      { font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+.font-mono    { font-family: 'IBM Plex Mono', 'Courier New', monospace; }
+
+/* Heading hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces Variable', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+}
+
+h1 { font-size: var(--text-4xl); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+h4 { font-size: var(--text-xl); }
+h5 { font-size: var(--text-lg); }
+h6 { font-size: var(--text-md); }
+
+/* Body text */
+p {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  color: var(--paper);
+}
+
+p + p { margin-top: var(--space-4); }
+
+/* UI labels */
+.label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Large editorial numbers */
+.stat {
+  font-family: 'Fraunces Variable', Georgia, serif;
+  font-variant-numeric: tabular-nums;
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--paper);
+}
+
+/* Receipt tape line items */
+.receipt-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-sm);
+  line-height: 1.8;
+  font-variant-numeric: tabular-nums;
+  color: var(--paper);
+}
+
+/* Caption */
+figcaption, .caption {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-xs);
+  color: var(--muted);
+  line-height: 1.5;
+  margin-top: var(--space-2);
+}
+
+/* Narrative text */
+.narrative {
+  font-size: var(--text-md);
+  line-height: 1.75;
+  max-width: var(--reading-max);
+}
+
+/* Chapter number */
+.chapter-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Synthetic badge */
+.synthetic-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stream-03);
+  border: 1px dashed var(--stream-03);
+  padding: 1px 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
