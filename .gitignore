@@ -1,0 +1,9 @@
+node_modules
+dist
+data/raw
+.env*
+*.zip
+archive (1)
+archive (2)
+archive (3)
+public/data/*.json
